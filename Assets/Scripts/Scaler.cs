@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Scale : MonoBehaviour
+public class Scaler : MonoBehaviour
 {
     [SerializeField] private float _speed = 1f;
     [SerializeField] private float _maxSize = 3f;
@@ -8,17 +8,15 @@ public class Scale : MonoBehaviour
 
     private int _direction = -1;
 
-    void Update()
+    private void Update()
     {
         float scaleChange = _speed * Time.deltaTime;
 
-        transform.localScale += new Vector3(scaleChange, scaleChange, scaleChange);
+        transform.localScale += Vector3.one * scaleChange;
 
-        Vector3 current = transform.localScale;
-
-        if (current.x >= _maxSize)
+        if (transform.localScale.x >= _maxSize)
             _speed *= _direction;
-        else if (current.x <= _minSize)
+        else if (transform.localScale.x <= _minSize)
             _speed *= _direction;
     }
 }

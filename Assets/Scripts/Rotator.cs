@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class Rotate : MonoBehaviour
+public class Rotator : MonoBehaviour
 {
     [SerializeField] private float _speed = 50f;
 
-    void Update()
+    private void Update()
     {
         transform.Rotate(Vector3.up, _speed * Time.deltaTime);
     }
