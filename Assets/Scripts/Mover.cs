@@ -1,25 +1,13 @@
 using UnityEngine;
+using DG.Tweening;
 
 public class Mover : MonoBehaviour
 {
-    [SerializeField] private float _speed = 1.5f;
-    [SerializeField] private float _minX = -3f;
-    [SerializeField] private float _maxX = 3f;
+    [SerializeField] private float _duration = 1.5f;
+    [SerializeField] private Transform _target;
 
-    private int _direction = 1;
-
-    private void Update()
+    private void Start()
     {
-        transform.Translate(GetDirection() * _speed * Time.deltaTime);
-    }
-
-    private Vector3 GetDirection()
-    {
-        if (transform.position.x >= _maxX)
-            _direction = -1;
-        else if (transform.position.x <= _minX)
-            _direction = 1;
-
-        return Vector3.right * _direction;
+        transform.DOMove(_target.position, _duration).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo);
     }
 }
