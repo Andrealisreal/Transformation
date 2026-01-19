@@ -488,7 +488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04182431c02a66646afce9effeebb164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1.5
+  _duration: 1.5
   _target: {fileID: 289913514}
 --- !u!135 &789675359
 SphereCollider:
@@ -769,7 +769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TextEffectSequence
   _text: {fileID: 993081155}
-  _duration: 6
+  _duration: 3
 --- !u!1 &1167951488
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,7 +1175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14352b0817bae0f47b8277743159a54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 2
+  _duration: 1
   _maxSize: 3
 --- !u!136 &1556013382
 CapsuleCollider:
@@ -1306,7 +1306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14352b0817bae0f47b8277743159a54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 2
+  _duration: 1
   _maxSize: 3
 --- !u!114 &1709931076
 MonoBehaviour:
@@ -1334,7 +1334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04182431c02a66646afce9effeebb164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1.5
+  _duration: 1.5
   _target: {fileID: 1291138972}
 --- !u!65 &1709931078
 BoxCollider:
